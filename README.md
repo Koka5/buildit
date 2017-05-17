@@ -4,7 +4,8 @@
 # How to run
 ```
 $ npm install
-$ cd dist && node server
+$ npm test // in case you want to run test script
+$ npm start //in case you want to run app
 ```
 
 # Licence
