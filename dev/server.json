@@ -1,0 +1,22 @@
+{
+  "vars":{
+    "supportEmail":"{{supportEmail}}",
+    "app":"{{app}}"
+  },
+  "root":{
+    "$" : "{{calls.page}}",
+    "api":{
+      "+":{
+        "qr": {
+          "@": "getQueryString"
+        }
+      },
+      "$":{
+        "from":"http://api.openweathermap.org/data/2.5/forecast?APPID=b5b03edf7b4daeedaf502064e5f4763d&{{qr}}"
+      }
+    },
+    ":city" : {
+      "$" : "{{calls.page}}"
+    }
+  }
+}

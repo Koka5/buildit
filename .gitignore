@@ -1,0 +1,11 @@
+/dist
+/prod
+.DS_Store
+/server.json
+/client.json
+/j2s.json
+/j2c.json
+/static
+/server.js
+npm-debug.log
+node_modules

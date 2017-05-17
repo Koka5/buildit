@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="mdl-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{{app.description}}">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>{{app.title}}</title>
+  <link rel="stylesheet" href="{{cssUrl}}">
+</head>
+  <body>
+    <div class="no-click" id="no_click_div"></div>
+    <div class="{{app.key}}-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="{{app.key}}-header mdl-layout__header">
+        <div id="id-fixedtop-block" class="mdl-layout__header-row"></div>
+      </header>
+      <div id="id-fixedmenu-block" class="{{app.key}}-drawer mdl-layout__drawer">
+      </div>
+      <main class="mdl-layout__content">
+        <div id="main-content-block" class="{{app.key}}-content"></div>
+        <div id="main-progress-block">
+          <center><h4>{{messages.mainloading}}</h4></center>
+          <center>
+            <div class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+          </center>
+          <br>
+          <center>{{messages.loadingtimeout}}</center>
+        </div>
+      </main>
+    </div>
+    <div id="{{app.key}}-snackbar-blk" class="mdl-js-snackbar mdl-snackbar">
+      <div class="mdl-snackbar__text"></div>
+      <button class="mdl-snackbar__action" type="button"></button>
+    </div>
+    <script>
+      window.stoploader = (function(elm,nocl){
+        elm.style.display = 'none';
+        nocl.className = '';
+      }).bind(null,document.getElementById('main-progress-block'),
+        document.getElementById('no_click_div'));
+      window.startloader = (function(elm,nocl){
+        elm.style.display = 'block';
+        nocl.className = 'no-click';
+      }).bind(null,document.getElementById('main-progress-block'),
+        document.getElementById('no_click_div'));
+      window.onload = function(){ stoploader(); };
+    </script>
+    <script src="{{jsUrl}}"></script>
+  </body>
+</html>

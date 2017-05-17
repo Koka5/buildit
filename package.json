@@ -1,0 +1,25 @@
+{
+  "name": "client-server",
+  "version": "0.0.1",
+  "description": "Simple client server development env",
+  "scripts": {
+    "start":"bash build.sh && cd dist && node server",
+    "test": "bash build.sh && node test"
+  },
+  "dependencies":{
+  },
+  "devDependencies":{
+    "material-design-lite":"1.3.0",
+    "json2server":"latest",
+    "nodeunit":"latest",
+    "less":"latest"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "author": {
+    "name":"Ramesh Kumar",
+    "email":"codeofnode@gmail.com"
+  },
+  "license": "MIT"
+}

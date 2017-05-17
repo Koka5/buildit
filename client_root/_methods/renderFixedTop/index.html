@@ -1,0 +1,18 @@
+<span id="current-{{app.key}}-title" class="mdl-layout-title">{{app.title}}</span>
+<div class="mdl-layout-spacer"></div>
+<div class="{{app.key}}-navigation-container">
+  <nav class="{{app.key}}-navigation mdl-navigation">
+    <a class="mdl-navigation__link mdl-typography--text-uppercase pointer" onclick="r2('/')">
+      Home
+    </a>
+  </nav>
+</div>
+<div style="display:none;" class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+  <label class="mdl-button mdl-js-button mdl-button--icon" for="top-fixed-search">
+    <i class="material-icons">search</i>
+  </label>
+  <div class="mdl-textfield__expandable-holder">
+    <input class="mdl-textfield__input" type="text" id="top-fixed-search">
+    <label class="mdl-textfield__label" for="search">Search a {{search.key}}</label>
+  </div>
+</div>

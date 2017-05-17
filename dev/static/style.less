@@ -1,0 +1,72 @@
+
+/* Material icons */
+@font-face {
+   font-family: 'Material Icons';
+   font-style: normal;
+   font-weight: 400;
+   src: url(font/MaterialIcons-Regular.eot); /* For IE6-8 */
+   src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(font/MaterialIcons-Regular.woff2) format('woff2'),
+        url(font/MaterialIcons-Regular.woff) format('woff'),
+        url(font/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* material icon ends */
+
+
+/* override material theme */
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+}
+
+/* my-custom */
+
+.pointer {
+  cursor: pointer;
+}
+
+.no-click {
+  background-color: rgba(209,225,232,.7);
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+#main-progress-block {
+  max-width:90%;
+  padding:10%;
+}
+
+.centered {
+	align-items: center;
+  justify-content: center;
+}

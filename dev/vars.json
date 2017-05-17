@@ -1,0 +1,25 @@
+{
+  "app":{
+    "name":"weather-now",
+    "key":"wth",
+    "title":"Weather Now",
+    "keywords":"{{_app.keywords.0}} {{_app.keywords.1}} {{_app.keywords.2}} {{_app.keywords.3}} {{_app.keywords.4}}",
+    "description":"Get weather information on the go.",
+    "version":"{{version}}"
+  },
+  "calls":{
+    "page":{
+      "@":"renderPage"
+    }
+  },
+  "supportEmail":"support@example.com",
+  "_app":{
+    "keywords": [
+      "client",
+      "server",
+      "json",
+      "modular",
+      "app"
+    ]
+  }
+}

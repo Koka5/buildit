@@ -1,0 +1,42 @@
+{
+  "vars":{
+    "supportEmail":"{{supportEmail}}",
+    "apiUrl":"/api",
+    "app":"{{app}}",
+    "cities":{
+      "delhi":{"text":"Delhi","country":"IN"},
+      "kolkata":{"text":"Kolkata","country":"IN"},
+      "chennai":{"text":"Chennai","country":"IN"},
+      "mumbai":{"text":"Mumbai","country":"IN"},
+      "chandigarh":{"text":"Chandigarh","country":"IN"}
+    }
+  },
+  "root":{
+    "+":{
+      "#current-{{app.key}}-title" : {
+        "on":"city-update",
+        "if":"{{currentCity}}",
+        "#val":"{{currentCity}}"
+      },
+      "#id-fixedtop-block" : {
+        "@":"renderFixedTop"
+      },
+      "#id-fixedmenu-block" : {
+        "@":"renderMainNav"
+      },
+      "#id-nav-drawer":{
+        "on":"list-cities",
+        "@" : "listCities"
+      }
+    },
+    "$" : {
+      "@":"renderHomePage"
+    },
+    ":city" : {
+      "$":{
+        "from":"{{apiUrl}}?q={{params.path.city}}",
+        "@":"renderCity"
+      }
+    }
+  }
+}

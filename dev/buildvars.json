@@ -1,0 +1,13 @@
+{
+  "buildNumber":0,
+  "version":"0.0.1",
+  "search":{
+    "text":"city",
+    "key" : "city"
+  },
+  "theme":{
+    "primary":"pink",
+    "accent" : "blue"
+  },
+  "material":"1.3.0"
+}

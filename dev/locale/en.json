@@ -1,0 +1,6 @@
+{
+  "mainloading":"loading ...",
+  "loadingtimeout" : "If it taking too much time, please contact us at {{supportEmail}}.",
+  "success":"Request was successful.",
+  "permdenied":"Permission denied. Please contact your admin."
+}
